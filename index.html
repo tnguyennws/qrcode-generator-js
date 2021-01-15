@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="fr">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Générateur de QRcode</title>
+        </head>
+
+        <script type="text/javascript" src="main.js"></script>
+
+        <body>
+            <h1>
+                <center> Bienvenue sur votre générateur de QRCode personnel </center>
+            </h1>
+
+            <div>
+                <center>
+                    <!-- Si les champs "input" ne sont pas compléter, renvoie un QRCode par défaut-->
+                    <p> Veuillez entrer une URL valide</p>
+                    <input id="input1" type="text">
+                    <br>
+
+                    <p> Veuillez entrer une couleur format RGB pour la couleur du QRcode</p>
+                    <input id="input2" type="text">
+                    <br>
+
+                    <p> Veuillez entrer une couleur format RGB pour la couleur du background du QRcode</p>
+                    <input id="input3" type="text">
+                    <br>
+
+                    <button id="btn1" onclick="getQRCode()"> Générer </button> <!-- Bouton permettant de générer le QRcode -->
+                    <br>
+
+                    <button id="btn2" onclick="downloadPNG()"> Passer en .png </button> <!-- Bouton servant à passer l'image en .png -->
+                    <button id="btn3" onclick="downloadSVG()"> Passer en .svg </button> <!-- Bouton servant à passer l'image en .svg -->
+                </center>
+                <br>
+
+            </div>
+            <br><br>
+
+            <center> 
+                 <!-- Affichage du QRcode généré -->
+                <img id="qrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=hello&amp;size=100x100&format=png&color=FF0000" alt="" title="" />
+            </center>
+
+        </body>
+    </html>
